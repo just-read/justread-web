@@ -27,10 +27,12 @@
     "@types/redux": "^3.6.0",
     "@types/redux-saga": "^0.10.5",
     "@typescript-eslint/eslint-plugin": "^2.21.0",
+    "concurrently": "^5.1.0",
     "eslint": "^6.8.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "concurrently --kill-others \"react-scripts start\"",
+    "start:force": "npm run clean:cache && npm run start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
