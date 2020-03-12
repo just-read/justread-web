@@ -59,7 +59,7 @@ const ModalContent = styled.div`
   padding: 24px;
 `;
 
-interface ModalProps {
+export interface ModalProps extends ReactModalAdapterProps {
   isOpen: boolean;
   onRequestClose?(event: React.MouseEvent | React.KeyboardEvent): void;
 }
