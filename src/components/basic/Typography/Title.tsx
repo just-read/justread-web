@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import styled from 'styled-components';
 
 const StyledTitle = styled.h1``;
@@ -41,24 +41,18 @@ type TitleProps = {
 
 const Title: React.FC<TitleProps> = props => {
   const { level = 1, children, ...restProps } = props;
-  let component: React.ComponentType<any> = H1;
-
-  if (TITLE_ELEMENT_LIST.indexOf(level) !== -1) {
+  const component: React.ComponentType<any> = useMemo(() => {
     switch (level) {
       case 2:
-        component = H2;
-        break;
+        return H2;
       case 3:
-        component = H3;
-        break;
+        return H3;
       case 4:
-        component = H4;
-        break;
+        return H4;
       default:
-        component = H1;
-        break;
+        return H1;
     }
-  }
+  }, [level]);
 
   return (
     <StyledTitle as={component} {...restProps}>

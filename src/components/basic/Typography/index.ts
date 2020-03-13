@@ -1,1 +1,1 @@
-export { Title } from 'components/basic/Typography/Title';
+export { Title } from './Title';
