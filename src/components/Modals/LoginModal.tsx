@@ -16,8 +16,8 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onRequestClose }) => {
     <Modal isOpen={isOpen} onRequestClose={onRequestClose}>
       <InputContainer>
         로그인 모달
-        <Input />
-        <Input />
+        <Input placeholder="이메일" />
+        <Input placeholder="비밀번호" />
         <Button>로그인</Button>
       </InputContainer>
     </Modal>
