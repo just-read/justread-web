@@ -13,6 +13,7 @@ const Input = styled.input`
   background-image: none;
   border: 1px solid #d9d9d9;
   border-radius: 2px;
+  box-sizing: border-box;
   transition: all 0.3s;
 
   :focus {

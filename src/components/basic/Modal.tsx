@@ -51,12 +51,17 @@ const StyledReactModal = styled(ReactModalAdapter).attrs({
   }
 `;
 
-const ModalContent = styled.div`
+const RealModal = styled.div`
   position: relative;
   background-color: #ffffff;
   border: 0;
   border-radius: 8px;
-  padding: 24px;
+  padding: 32px;
+`;
+
+const ModalContent = styled.div`
+  display: inline-block;
+  width: 100%;
 `;
 
 export interface ModalProps extends ReactModalAdapterProps {
@@ -70,7 +75,9 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onRequestClose, children }) => (
     onRequestClose={onRequestClose}
     closeTimeoutMS={300}
   >
-    <ModalContent>{children}</ModalContent>
+    <RealModal>
+      <ModalContent>{children}</ModalContent>
+    </RealModal>
   </StyledReactModal>
 );
 
