@@ -1,19 +1,17 @@
-import React, { useState, useCallback } from 'react';
-import LoginModal from 'components/Modals/LoginModal';
+import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { Layout } from 'antd';
+import Header from 'components/Header';
+import 'antd/dist/antd.css';
 
 const App = () => {
-  const [modalVisible, setModalVisible] = useState<boolean>(false);
-
-  const openModal = useCallback(() => setModalVisible(true), []);
-
-  const closeModal = useCallback(() => setModalVisible(false), []);
-
   return (
-    <div className="App">
-      Login!
-      <button onClick={openModal}>모달 열기</button>
-      <LoginModal isOpen={modalVisible} onRequestClose={closeModal} />
-    </div>
+    <Layout>
+      <Header />
+      <Router>
+        <div>Test</div>
+      </Router>
+    </Layout>
   );
 };
 
