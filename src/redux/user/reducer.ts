@@ -9,8 +9,8 @@ const initialState: IUserState = {
     message: null,
     isLoggedIn: false,
     accessToken: null,
-    refreshToken: null
-  }
+    refreshToken: null,
+  },
 };
 
 const userReducer = (state: IUserState = initialState, action: TUserAction) =>
@@ -25,14 +25,14 @@ const userReducer = (state: IUserState = initialState, action: TUserAction) =>
           isLoggedIn: true,
           accessToken: action.payload.accessToken,
           refreshToken: action.payload.refreshToken,
-          ...draft.auth
+          ...draft.auth,
         };
         break;
       case getType(signUp.failure):
         draft.auth = {
           loading: false,
           message: action.payload.message,
-          ...draft.auth
+          ...draft.auth,
         };
         break;
       default:

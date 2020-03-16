@@ -2,25 +2,41 @@
   "root": true,
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
+    "ecmaFeatures": { "jsx": true },
+    "ecmaVersion": 2018,
     "project": "tsconfig.json",
     "sourceType": "module"
   },
-  "extends": [
-    "react-app",
-    "prettier",
-    "prettier/@typescript-eslint",
-    "prettier/react"
-  ],
-  "plugins": ["typescript", "react-hooks", "@typescript-eslint"],
+  "extends": ["react-app", "prettier", "prettier/@typescript-eslint", "prettier/react"],
+  "plugins": ["typescript", "react-hooks", "@typescript-eslint", "prettier"],
   "rules": {
+    "prettier/prettier": "warn",
+    "indent": ["warn", 2, { "SwitchCase": 1 }],
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
-    "@typescript-eslint/no-unused-vars": [
+    "no-use-before-define": [
+      "warn",
+      {
+        "functions": false,
+        "classes": true
+      }
+    ],
+    "no-unused-vars": [
       "warn",
       {
         "varsIgnorePattern": "[iI]gnored",
         "argsIgnorePattern": "^_"
       }
-    ]
+    ],
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/interface-name-prefix": "off",
+    "@typescript-eslint/camelcase": "off"
+  },
+  "settings": {
+    "react": {
+      "pragma": "React",
+      "version": "detect"
+    }
   }
 }

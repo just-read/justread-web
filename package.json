@@ -37,12 +37,14 @@
     "concurrently": "^5.1.0",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-typescript": "^0.14.0",
     "prettier": "^1.19.1"
   },
   "scripts": {
     "start": "concurrently --kill-others \"react-scripts start\"",
     "start:force": "npm run clean:cache && npm run start",
+    "lint": "eslint './**/*.{ts,tsx}'",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

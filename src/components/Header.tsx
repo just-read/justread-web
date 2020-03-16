@@ -6,7 +6,7 @@ import styled from 'styled-components';
 import Logo from 'assets/justread-logo.png';
 import { ApplicationState } from 'redux/configureStore';
 
-const HeaderContainer = styled(Layout.Header)`
+const HeaderContainer = styled.div`
   display: flex;
   flex-direction: row;
   background-color: #ffffff;
@@ -42,8 +42,8 @@ const FunctionButton = styled(Button)`
 const Header: React.FC = () => {
   const {
     user: {
-      auth: { isLoggedIn }
-    }
+      auth: { isLoggedIn },
+    },
   } = useSelector((state: ApplicationState) => state);
 
   const loggedOutComponent = useMemo(
@@ -73,9 +73,7 @@ const Header: React.FC = () => {
         </Link>
       </LogoContainer>
       <SearchContainer></SearchContainer>
-      <FuntionContainer>
-        {isLoggedIn ? loggedInComponent : loggedOutComponent}
-      </FuntionContainer>
+      <FuntionContainer>{isLoggedIn ? loggedInComponent : loggedOutComponent}</FuntionContainer>
     </HeaderContainer>
   );
 };

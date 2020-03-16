@@ -7,22 +7,13 @@ interface ReactModalAdapterProps extends ReactModal.Props {
   modalClassName?: string | ReactModal.Classes;
 }
 
-const ReactModalAdapter: React.FC<ReactModalAdapterProps> = ({
-  className,
-  modalClassName,
-  ...props
-}) => (
-  <ReactModal
-    className={modalClassName}
-    portalClassName={className}
-    bodyOpenClassName="portalOpen"
-    {...props}
-  />
+const ReactModalAdapter: React.FC<ReactModalAdapterProps> = ({ className, modalClassName, ...props }) => (
+  <ReactModal className={modalClassName} portalClassName={className} bodyOpenClassName="portalOpen" {...props} />
 );
 
 const StyledReactModal = styled(ReactModalAdapter).attrs({
   overlayClassName: 'Overlay',
-  modalClassName: 'Modal'
+  modalClassName: 'Modal',
 })`
   & .Overlay {
     position: fixed;
@@ -70,11 +61,7 @@ export interface ModalProps extends ReactModalAdapterProps {
 }
 
 const Modal: React.FC<ModalProps> = ({ isOpen, onRequestClose, children }) => (
-  <StyledReactModal
-    isOpen={isOpen}
-    onRequestClose={onRequestClose}
-    closeTimeoutMS={300}
-  >
+  <StyledReactModal isOpen={isOpen} onRequestClose={onRequestClose} closeTimeoutMS={300}>
     <RealModal>
       <ModalContent>{children}</ModalContent>
     </RealModal>

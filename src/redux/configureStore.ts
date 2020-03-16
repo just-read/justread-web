@@ -4,7 +4,7 @@ import { all, fork } from 'redux-saga/effects';
 import user, { userSaga } from './user';
 
 const rootReducer = combineReducers({
-  user
+  user,
 });
 
 export type ApplicationState = ReturnType<typeof rootReducer>;
