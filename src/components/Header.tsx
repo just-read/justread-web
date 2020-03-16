@@ -1,7 +1,10 @@
-import React from 'react';
-import { Layout, Button } from 'antd';
+import React, { useMemo } from 'react';
+import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { Layout, Button, Avatar } from 'antd';
 import styled from 'styled-components';
 import Logo from 'assets/justread-logo.png';
+import { ApplicationState } from 'redux/configureStore';
 
 const HeaderContainer = styled(Layout.Header)`
   display: flex;
@@ -37,15 +40,41 @@ const FunctionButton = styled(Button)`
 `;
 
 const Header: React.FC = () => {
+  const {
+    user: {
+      auth: { isLoggedIn }
+    }
+  } = useSelector((state: ApplicationState) => state);
+
+  const loggedOutComponent = useMemo(
+    () => (
+      <>
+        <FunctionButton>로그인</FunctionButton>
+        <FunctionButton type="primary">회원가입</FunctionButton>
+      </>
+    ),
+    []
+  );
+
+  const loggedInComponent = useMemo(
+    () => (
+      <>
+        <Avatar size={48} />
+      </>
+    ),
+    []
+  );
+
   return (
     <HeaderContainer>
       <LogoContainer>
-        <LogoImage src={Logo} />
+        <Link to="/">
+          <LogoImage src={Logo} />
+        </Link>
       </LogoContainer>
       <SearchContainer></SearchContainer>
       <FuntionContainer>
-        <FunctionButton>로그인</FunctionButton>
-        <FunctionButton type="primary">회원가입</FunctionButton>
+        {isLoggedIn ? loggedInComponent : loggedOutComponent}
       </FuntionContainer>
     </HeaderContainer>
   );

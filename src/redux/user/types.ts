@@ -4,7 +4,7 @@ import * as actions from './actions';
 export type TUserAction = ActionType<typeof actions>;
 
 export interface IUserState {
-  logIn: {
+  auth: {
     loading: boolean;
     message: string | null;
     isLoggedIn: boolean;

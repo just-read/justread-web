@@ -4,15 +4,13 @@ import { Layout } from 'antd';
 import 'antd/dist/antd.css';
 import Header from 'components/Header';
 
-const App = () => {
-  return (
+const App = () => (
+  <Router>
     <Layout>
       <Header />
-      <Router>
-        <div>Test</div>
-      </Router>
+      <div>Test</div>
     </Layout>
-  );
-};
+  </Router>
+);
 
 export default App;
