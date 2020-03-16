@@ -11,13 +11,7 @@
     "prettier/@typescript-eslint",
     "prettier/react"
   ],
-  "plugins": [
-    "typescript",
-    "react-hooks",
-    "@typescript-eslint",
-    "@typescript-eslint/tslint",
-    "import"
-  ],
+  "plugins": ["typescript", "react-hooks", "@typescript-eslint"],
   "rules": {
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
