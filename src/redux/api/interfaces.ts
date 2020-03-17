@@ -1,15 +1,22 @@
-export interface ILogInPayload {
+export interface ILogInParam {
   email: string;
   password: string;
 }
 
-export interface ISignUpPayload {
+export interface ISignUpParam {
   email: string;
   password: string;
   nickName: string;
 }
 
-export interface IRefreshTokenPayload {
+export interface ILogInWithGoogleParam {
+  email: string;
+  nickName: string;
+  googleId: string;
+  tokenId: string;
+}
+
+export interface IRefreshTokenParam {
   refreshToken: string;
 }
 

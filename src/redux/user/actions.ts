@@ -1,6 +1,6 @@
 import { createAsyncAction } from 'typesafe-actions';
 import { ISignUpParam, ITokenPayload } from './types';
-import { IFailPayload } from '../types';
+import { IFailPayload } from '../sharedTypes';
 
 export const SIGN_UP_REQUEST = 'user/SIGN_UP_REQUEST' as const;
 export const SIGN_UP_SUCCESS = 'user/SIGN_UP_SUCCESS' as const;

@@ -13,21 +13,6 @@ export interface IAuthState {
   };
 }
 
-export interface ISignUpParam {
-  email: string;
-  password: string;
-  nickName: string;
-}
-
-export interface ILogInParam {
-  email: string;
-  password: string;
-}
-
-export interface IRefreshTokenParam {
-  refreshToken: string;
-}
-
 export interface ITokenPayload {
   accessToken: string;
   refreshToken: string;
