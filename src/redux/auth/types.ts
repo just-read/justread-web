@@ -1,9 +1,9 @@
 import { ActionType } from 'typesafe-actions';
 import * as actions from './actions';
 
-export type TUserAction = ActionType<typeof actions>;
+export type TAuthAction = ActionType<typeof actions>;
 
-export interface IUserState {
+export interface IAuthState {
   auth: {
     loading: boolean;
     message: string | null;
@@ -17,6 +17,15 @@ export interface ISignUpParam {
   email: string;
   password: string;
   nickName: string;
+}
+
+export interface ILogInParam {
+  email: string;
+  password: string;
+}
+
+export interface IRefreshTokenParam {
+  refreshToken: string;
 }
 
 export interface ITokenPayload {
