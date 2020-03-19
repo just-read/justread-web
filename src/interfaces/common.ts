@@ -1,5 +1,5 @@
-interface Book {
-  uniqueId: string;
+export interface Book {
+  id: number;
   title: string;
   isbn: string;
   description: string;
@@ -7,4 +7,7 @@ interface Book {
   authors: string;
 }
 
-export { Book };
+export interface Bookshelf {
+  id: number;
+  name: string;
+}

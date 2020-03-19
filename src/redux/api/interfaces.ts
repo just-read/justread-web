@@ -1,4 +1,4 @@
-import { Book } from 'interfaces/common';
+import { Book, Bookshelf } from 'interfaces/common';
 
 /* 요청 인터페이스 */
 
@@ -30,6 +30,11 @@ export interface IGetBookListParam {
   limit: number;
 }
 
+export interface IGetBookshelfListParam {
+  page: number;
+  limit: number;
+}
+
 /* 응답 인터페이스 */
 interface Response<T> {
   success: boolean;
@@ -54,5 +59,11 @@ interface BookListResult {
   books: Book[];
 }
 
+interface BookshelfListResult {
+  pageInfo: PageTransitionEventInit;
+  bookshelves: Bookshelf[];
+}
+
 export type TAuthResponse = Response<AuthResult>;
 export type TGetBookListResponse = Response<BookListResult>;
+export type TGetBookshelfListResponse = Response<BookshelfListResult>;
