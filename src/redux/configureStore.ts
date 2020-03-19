@@ -6,7 +6,7 @@ import auth, { authSaga } from './auth';
 import user, { userSaga } from './user';
 import book, { bookSaga } from './book';
 
-Axios.defaults.baseURL = process.env.REACT_APP_API_URL;
+Axios.defaults.baseURL = process.env.REACT_APP_API_URL || 'http://localhost:4000';
 
 const rootReducer = combineReducers({
   auth,

@@ -4,8 +4,21 @@ import { IBookState, TBookAction } from './types';
 
 const initialState: IBookState = {
   bookList: {
+    recent: {
+      loading: false,
+      message: null,
+      books: [],
+    },
+    popular: {
+      loading: false,
+      message: null,
+      books: [],
+    },
+  },
+  bookDetail: {
     loading: false,
     message: null,
+    book: null,
   },
 };
 
