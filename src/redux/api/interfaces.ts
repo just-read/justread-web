@@ -60,7 +60,12 @@ export interface ICreateNewBookshelfParam {
   name: string;
 }
 
-export interface IDeletBookshelfParam {
+export interface IModifyBookshelfParam {
+  bookshelfId: number;
+  name: string;
+}
+
+export interface IRemoveBookshelfParam {
   bookshelfId: number;
 }
 
@@ -109,6 +114,10 @@ interface CreateNewBookshelfResult {
   newBookshelf: Bookshelf;
 }
 
+interface ModifyBookshelfResult {
+  updatedBookshelf: Bookshelf;
+}
+
 interface RemoveBookshelfResult {
   removedBookshelf: Bookshelf;
 }
@@ -120,4 +129,5 @@ export type TGetBookDetailsResponse = Response<GetBookDetailsResult>;
 export type TModifyBookResponse = Response<ModifyBookResult>;
 export type TGetBookshelfListResponse = Response<BookshelfListResult>;
 export type TCreateNewBookshelfResponse = Response<CreateNewBookshelfResult>;
+export type TModifyBookshelfResponse = Response<ModifyBookshelfResult>;
 export type TRemoveBookshelfResponse = Response<RemoveBookshelfResult>;

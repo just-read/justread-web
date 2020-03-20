@@ -4,7 +4,9 @@ import {
   TGetBookshelfListResponse,
   ICreateNewBookshelfParam,
   TCreateNewBookshelfResponse,
-  IDeletBookshelfParam,
+  IModifyBookshelfParam,
+  TModifyBookshelfResponse,
+  IRemoveBookshelfParam,
   TRemoveBookshelfResponse,
 } from './interfaces';
 
@@ -18,7 +20,13 @@ export const apiAddNewBookshelf = async (params: ICreateNewBookshelfParam): Prom
   return data;
 };
 
-export const apiDeleteBookshelf = async (params: IDeletBookshelfParam): Promise<TRemoveBookshelfResponse> => {
+export const apiModifyBookshelf = async (params: IModifyBookshelfParam): Promise<TModifyBookshelfResponse> => {
+  const { bookshelfId, ...otherParams } = params;
+  const { data } = await Axios.put<TModifyBookshelfResponse>(`/v1/bookshelves/${bookshelfId}`, otherParams);
+  return data;
+};
+
+export const apiDeleteBookshelf = async (params: IRemoveBookshelfParam): Promise<TRemoveBookshelfResponse> => {
   const { bookshelfId } = params;
   const { data } = await Axios.delete<TRemoveBookshelfResponse>(`/v1/bookshelve/${bookshelfId}`);
   return data;
