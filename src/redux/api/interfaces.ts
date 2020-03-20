@@ -30,6 +30,27 @@ export interface IGetBookListParam {
   limit: number;
 }
 
+export interface IAddNewBookParam {
+  title: string;
+  isbn: string;
+  description: string;
+  year: number;
+  authors: string;
+}
+
+export interface IGetBookDetails {
+  bookId: number;
+}
+
+export interface IModifyBook {
+  bookId: string;
+  title: string;
+  isbn: string;
+  description: string;
+  year: number;
+  authors: string;
+}
+
 export interface IGetBookshelfListParam {
   page: number;
   limit: number;
@@ -59,6 +80,18 @@ interface BookListResult {
   books: Book[];
 }
 
+interface AddNewBookResult {
+  newBook: Book;
+}
+
+interface GetBookDetailsResult {
+  bookDetails: any;
+}
+
+interface ModifyBookResult {
+  modifiedBook: Book;
+}
+
 interface BookshelfListResult {
   pageInfo: PageTransitionEventInit;
   bookshelves: Bookshelf[];
@@ -66,4 +99,7 @@ interface BookshelfListResult {
 
 export type TAuthResponse = Response<AuthResult>;
 export type TGetBookListResponse = Response<BookListResult>;
+export type TAddNewBookResponse = Response<AddNewBookResult>;
+export type TGetBookDetailsResponse = Response<GetBookDetailsResult>;
+export type TModifyBookResponse = Response<ModifyBookResult>;
 export type TGetBookshelfListResponse = Response<BookshelfListResult>;
