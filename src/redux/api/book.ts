@@ -4,9 +4,9 @@ import {
   TGetBookListResponse,
   IAddNewBookParam,
   TAddNewBookResponse,
-  IGetBookDetails,
+  IGetBookDetailsParam,
   TGetBookDetailsResponse,
-  IModifyBook,
+  IModifyBookParam,
   TModifyBookResponse,
 } from './interfaces';
 
@@ -20,13 +20,13 @@ export const apiAddNewBook = async (params: IAddNewBookParam): Promise<TAddNewBo
   return data;
 };
 
-export const getBookDetails = async (params: IGetBookDetails): Promise<TGetBookDetailsResponse> => {
+export const getBookDetails = async (params: IGetBookDetailsParam): Promise<TGetBookDetailsResponse> => {
   const { bookId } = params;
   const { data } = await Axios.get<TGetBookDetailsResponse>(`/v1/books/${bookId}`);
   return data;
 };
 
-export const apiModifyBook = async (params: IModifyBook): Promise<TModifyBookResponse> => {
+export const apiModifyBook = async (params: IModifyBookParam): Promise<TModifyBookResponse> => {
   const { bookId, ...otherParams } = params;
   const { data } = await Axios.put<TModifyBookResponse>(`/v1/books/${bookId}`, otherParams);
   return data;

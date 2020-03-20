@@ -38,11 +38,11 @@ export interface IAddNewBookParam {
   authors: string;
 }
 
-export interface IGetBookDetails {
+export interface IGetBookDetailsParam {
   bookId: number;
 }
 
-export interface IModifyBook {
+export interface IModifyBookParam {
   bookId: string;
   title: string;
   isbn: string;
@@ -54,6 +54,14 @@ export interface IModifyBook {
 export interface IGetBookshelfListParam {
   page: number;
   limit: number;
+}
+
+export interface ICreateNewBookshelfParam {
+  name: string;
+}
+
+export interface IDeletBookshelfParam {
+  bookshelfId: number;
 }
 
 /* 응답 인터페이스 */
@@ -97,9 +105,19 @@ interface BookshelfListResult {
   bookshelves: Bookshelf[];
 }
 
+interface CreateNewBookshelfResult {
+  newBookshelf: Bookshelf;
+}
+
+interface RemoveBookshelfResult {
+  removedBookshelf: Bookshelf;
+}
+
 export type TAuthResponse = Response<AuthResult>;
 export type TGetBookListResponse = Response<BookListResult>;
 export type TAddNewBookResponse = Response<AddNewBookResult>;
 export type TGetBookDetailsResponse = Response<GetBookDetailsResult>;
 export type TModifyBookResponse = Response<ModifyBookResult>;
 export type TGetBookshelfListResponse = Response<BookshelfListResult>;
+export type TCreateNewBookshelfResponse = Response<CreateNewBookshelfResult>;
+export type TRemoveBookshelfResponse = Response<RemoveBookshelfResult>;
