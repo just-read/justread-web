@@ -9,15 +9,16 @@ import { ApplicationState } from 'redux/configureStore';
 const HeaderContainer = styled.div`
   display: flex;
   flex-direction: row;
+  height: 70px;
   background-color: #ffffff;
+  border-bottom: 1px solid #e1e1e1;
+  padding: 15px;
 `;
-
 const LogoContainer = styled.div`
   display: flex;
   flex: 0;
   align-items: center;
 `;
-
 const SearchContainer = styled.div`
   display: flex;
   flex: 1;
@@ -29,10 +30,9 @@ const FuntionContainer = styled.div`
 `;
 
 const LogoImage = styled.img`
-  height: 36px;
+  height: 40px;
   float: left;
 `;
-
 const FunctionButton = styled(Button)`
   :first-of-type {
     margin-right: 8px;
