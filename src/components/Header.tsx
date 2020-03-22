@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import { Layout, Button, Avatar } from 'antd';
+import { Button, Avatar } from 'antd';
 import styled from 'styled-components';
 import Logo from 'assets/justread-logo.png';
 import { ApplicationState } from 'redux/configureStore';
@@ -28,7 +28,6 @@ const FuntionContainer = styled.div`
   display: flex;
   align-items: center;
 `;
-
 const LogoImage = styled.img`
   height: 40px;
   float: left;
