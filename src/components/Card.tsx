@@ -9,8 +9,26 @@ const CardContainer = styled.div`
   overflow: auto;
   border-left: 1px solid #e1e1e1;
 `;
+const TitleContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 90px;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 40px;
+  color: #005897;
+  background-color: #e6e6e6;
+  border-bottom: 1px solid #e1e1e1;
+  padding: 25px;
+`;
+
 const Card: React.FC = () => {
-  return <CardContainer></CardContainer>;
+  return (
+    <CardContainer>
+      <TitleContainer>Book Information</TitleContainer>
+    </CardContainer>
+  );
 };
 
 export default Card;
