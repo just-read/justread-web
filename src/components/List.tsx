@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import IconCard from 'assets/icon-tab-card.png';
 import IconList from 'assets/icon-tab-list.png';
 import { ApplicationState } from 'redux/configureStore';
+import ListCard from 'components/ListCard';
 
 const ListContainer = styled.div`
   flex: none;
@@ -46,6 +47,7 @@ const List: React.FC = () => {
         <CardTab></CardTab>
         <CardTab></CardTab>
       </TabContainer>
+      <ListCard></ListCard>
     </ListContainer>
   );
 };
