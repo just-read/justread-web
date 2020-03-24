@@ -14,7 +14,7 @@ const TitleContainer = styled.div`
   flex-direction: row;
   width: 100%;
   height: 90px;
-  font-size: 32px;
+  font-size: 26px;
   font-weight: 700;
   line-height: 40px;
   color: #005897;
