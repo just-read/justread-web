@@ -1,10 +1,7 @@
 import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
 import { createGlobalStyle } from 'styled-components';
 import 'antd/dist/antd.css';
-import styled from 'styled-components';
-import Header from 'components/Header';
-import BookList from 'pages/BookList';
+import Home from 'pages/Home';
 
 export const GlobalStyle = createGlobalStyle`
   html, body {
@@ -12,20 +9,12 @@ export const GlobalStyle = createGlobalStyle`
     overflow: hidden;
   }
 `;
-export const MainContainer = styled.div`
-  max-width: 1200px;
-  height: 100%;
-  margin: 0 auto;
-`;
 
-const App = () => (
-  <Router>
+const App: React.FC = () => (
+  <>
     <GlobalStyle />
-    <Header />
-    <MainContainer>
-      <BookList></BookList>
-    </MainContainer>
-  </Router>
+    <Home></Home>
+  </>
 );
 
 export default App;

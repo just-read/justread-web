@@ -1,6 +1,10 @@
 {
   "root": true,
   "parser": "@typescript-eslint/parser",
+  "env": {
+    "browser": true,
+    "es6": true
+  },
   "parserOptions": {
     "ecmaFeatures": { "jsx": true },
     "ecmaVersion": 2018,
@@ -14,7 +18,7 @@
     "plugin:prettier/recommended",
     "prettier/@typescript-eslint"
   ],
-  "plugins": ["typescript", "react-hooks", "@typescript-eslint", "prettier"],
+  "plugins": ["react", "typescript", "react-hooks", "@typescript-eslint", "prettier"],
   "rules": {
     "prettier/prettier": "warn",
     "indent": ["warn", 2, { "SwitchCase": 1 }],
