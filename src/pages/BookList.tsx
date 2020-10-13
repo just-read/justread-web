@@ -4,7 +4,7 @@ import List from 'components/List';
 import Card from 'components/Card';
 import { ApplicationState } from 'redux/configureStore';
 
-const BookListContainer = styled.div`
+export const BookListContainer = styled.div`
   width: 100%;
   display: flex;
   flex-direction: row;

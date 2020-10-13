@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import styled from 'styled-components';
 
-const StyledTitle = styled.h1``;
+export const StyledTitle = styled.h1``;
 
 const defaultTitleStyle = `
   margin-top: 0;

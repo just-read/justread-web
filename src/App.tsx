@@ -6,13 +6,13 @@ import styled from 'styled-components';
 import Header from 'components/Header';
 import BookList from 'pages/BookList';
 
-const GlobalStyle = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle`
   html, body {
     height: 100%;
     overflow: hidden;
   }
 `;
-const MainContainer = styled.div`
+export const MainContainer = styled.div`
   max-width: 1200px;
   height: 100%;
   margin: 0 auto;

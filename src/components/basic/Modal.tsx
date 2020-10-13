@@ -11,7 +11,7 @@ const ReactModalAdapter: React.FC<ReactModalAdapterProps> = ({ className, modalC
   <ReactModal className={modalClassName} portalClassName={className} bodyOpenClassName="portalOpen" {...props} />
 );
 
-const StyledReactModal = styled(ReactModalAdapter).attrs({
+export const StyledReactModal = styled(ReactModalAdapter).attrs({
   overlayClassName: 'Overlay',
   modalClassName: 'Modal',
 })`
@@ -42,7 +42,7 @@ const StyledReactModal = styled(ReactModalAdapter).attrs({
   }
 `;
 
-const RealModal = styled.div`
+export const RealModal = styled.div`
   position: relative;
   background-color: #ffffff;
   border: 0;
@@ -50,7 +50,7 @@ const RealModal = styled.div`
   padding: 32px;
 `;
 
-const ModalContent = styled.div`
+export const ModalContent = styled.div`
   display: inline-block;
   width: 100%;
 `;

@@ -6,7 +6,7 @@ import styled from 'styled-components';
 import Logo from 'assets/justread-logo.png';
 import { ApplicationState } from 'redux/configureStore';
 
-const HeaderContainer = styled.div`
+export const HeaderContainer = styled.div`
   display: flex;
   flex-direction: row;
   height: 72px;
@@ -14,25 +14,25 @@ const HeaderContainer = styled.div`
   border-bottom: 1px solid #e1e1e1;
   padding: 15px;
 `;
-const LogoContainer = styled.div`
+export const LogoContainer = styled.div`
   display: flex;
   flex: 0;
   align-items: center;
 `;
-const SearchContainer = styled.div`
+export const SearchContainer = styled.div`
   display: flex;
   flex: 1;
   align-items: center;
 `;
-const FuntionContainer = styled.div`
+export const FuntionContainer = styled.div`
   display: flex;
   align-items: center;
 `;
-const LogoImage = styled.img`
+export const LogoImage = styled.img`
   height: 40px;
   float: left;
 `;
-const FunctionButton = styled(Button)`
+export const FunctionButton = styled(Button)`
   :first-of-type {
     margin-right: 8px;
   }

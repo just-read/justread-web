@@ -7,23 +7,23 @@ import IconList from 'assets/icon-tab-list.png';
 import { ApplicationState } from 'redux/configureStore';
 import ListCard from 'components/ListCard';
 
-const ListContainer = styled.div`
+export const ListContainer = styled.div`
   flex: none;
   width: 60%;
 `;
-const TabContainer = styled.div`
+export const TabContainer = styled.div`
   display: flex;
   flex-direction: row;
   width: 100%;
   height: 50px;
   border-bottom: 1px solid #e1e1e1;
 `;
-const CardTab = styled.div`
+export const CardTab = styled.div`
   flex: auto;
   position: relative;
   border-left: 1px solid #e1e1e1;
 `;
-const CardIcon = styled.img`
+export const CardIcon = styled.img`
   width: 20px;
   height: 20px;
   position: absolute;

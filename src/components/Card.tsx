@@ -4,12 +4,12 @@ import { useSelector } from 'react-redux';
 import styled from 'styled-components';
 import { ApplicationState } from 'redux/configureStore';
 
-const CardContainer = styled.div`
+export const CardContainer = styled.div`
   flex: 1;
   overflow: auto;
   border-left: 1px solid #e1e1e1;
 `;
-const TitleContainer = styled.div`
+export const TitleContainer = styled.div`
   width: 100%;
   height: 50px;
   color: #005897;

@@ -5,13 +5,13 @@ import Input from 'components/basic/Input';
 import Button from 'components/basic/Button';
 import { Title } from 'components/basic/Typography';
 
-const LoginContainer = styled.div`
+export const LoginContainer = styled.div`
   flex-direction: column;
   display: inline-block;
   width: 100%;
 `;
 
-const Form = styled.form`
+export const Form = styled.form`
   display: inline-block;
   width: 100%;
   flex-direction: column;

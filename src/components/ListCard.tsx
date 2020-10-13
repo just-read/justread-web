@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import styled from 'styled-components';
 import { ApplicationState } from 'redux/configureStore';
 
-const ListCardContainer = styled.div`
+export const ListCardContainer = styled.div`
   flex: none;
   width: 60%;
 `;
