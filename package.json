@@ -33,7 +33,7 @@
     "@types/react-redux": "^7.1.7",
     "@types/redux": "^3.6.0",
     "@types/redux-saga": "^0.10.5",
-    "@types/styled-components": "^5.0.1",
+    "@types/styled-components": "^5.1.4",
     "@typescript-eslint/eslint-plugin": "^2.23.0",
     "@typescript-eslint/parser": "^2.23.0",
     "concurrently": "^5.1.0",
@@ -47,12 +47,16 @@
     "start": "concurrently --kill-others \"react-scripts start\"",
     "start:force": "npm run clean:cache && npm run start",
     "lint": "eslint './**/*.{ts,tsx}'",
+    "lint:fix": "eslint --fix './**/*.{ts,tsx}'",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": [
+      "react-app",
+      "prettier"
+    ]
   },
   "browserslist": {
     "production": [

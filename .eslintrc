@@ -7,13 +7,17 @@
     "project": "tsconfig.json",
     "sourceType": "module"
   },
-  "extends": ["react-app", "prettier", "prettier/@typescript-eslint", "prettier/react"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "prettier/@typescript-eslint"
+  ],
   "plugins": ["typescript", "react-hooks", "@typescript-eslint", "prettier"],
   "rules": {
     "prettier/prettier": "warn",
     "indent": ["warn", 2, { "SwitchCase": 1 }],
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn",
     "no-use-before-define": [
       "warn",
       {
@@ -21,17 +25,18 @@
         "classes": true
       }
     ],
-    "no-unused-vars": [
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/no-use-before-define": [
       "warn",
       {
-        "varsIgnorePattern": "[iI]gnored",
-        "argsIgnorePattern": "^_"
+        "functions": false,
+        "classes": true
       }
     ],
-    "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/interface-name-prefix": "off",
-    "@typescript-eslint/camelcase": "off"
+    "@typescript-eslint/camelcase": "off",
+    "@typescript-eslint/no-non-null-assertion": "off"
   },
   "settings": {
     "react": {
