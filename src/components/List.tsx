@@ -15,7 +15,7 @@ const TabContainer = styled.div`
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: 90px;
+  height: 50px;
   border-bottom: 1px solid #e1e1e1;
 `;
 const CardTab = styled.div`
@@ -24,8 +24,8 @@ const CardTab = styled.div`
   border-left: 1px solid #e1e1e1;
 `;
 const CardIcon = styled.img`
-  width: 50px;
-  height: 50px;
+  width: 20px;
+  height: 20px;
   position: absolute;
   top: 0;
   bottom: 0;

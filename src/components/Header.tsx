@@ -9,7 +9,7 @@ import { ApplicationState } from 'redux/configureStore';
 const HeaderContainer = styled.div`
   display: flex;
   flex-direction: row;
-  height: 70px;
+  height: 72px;
   background-color: #ffffff;
   border-bottom: 1px solid #e1e1e1;
   padding: 15px;

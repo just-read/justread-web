@@ -17,7 +17,7 @@ const Form = styled.form`
   flex-direction: column;
 `;
 
-interface LoginModalProps extends ModalProps {}
+type LoginModalProps = ModalProps;
 
 const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onRequestClose }) => {
   return (
